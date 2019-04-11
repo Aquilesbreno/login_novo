@@ -36,6 +36,24 @@ export class CriarContaPage {
     });
   }
 
+  onSubmit(){
+    if(this.form.valid) {
+      this.aut.createAccount(this.form.value)
+       .then( () => {
+        this.toast.create({message:'Conta criada com sucesso. Foi enviado um e-mail de confirmação para você efetuar o login.',
+         duration: 3000}).present();
+         this.navCtrl.setRoot('HomePage');
+      })
+      .catch(message => {
+        this.toast.create({message: message, duration: 3000}).present();
+      })
+    }
+  }
+
+  onClose(){
+    this.navCtrl.pop();
+  }
+
 
 
   }

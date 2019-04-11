@@ -35,6 +35,8 @@ export class EntrarPage {
     })
   }
 
+
+
   sair(){
     this.auth.auth.signOut();
       const userState = this.auth.authState.subscribe(user =>{
