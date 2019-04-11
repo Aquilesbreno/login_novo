@@ -20,8 +20,22 @@ export class CriarContaPage {
               private toast: ToastController,
               private formBuilder: FormBuilder
 
-
               ) {
+                this.creatForm();
+
+
+
+
   }
+  private creatForm(){
+    this.form = this.formBuilder.group({
+      nome: ['', Validators.required],
+      nascimento: [''],
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', Validators.required],
+    });
+  }
+
+
 
   }
