@@ -58,6 +58,7 @@ export class EntrarPage {
            this.navCtrl.setRoot('HomePage');
          } else {
            this.toast.create({ message:'Seu e-mail ainda não foi verificado. Por favor acesse seu e-mail e clique no link para verificar conta', duration: 6000 }).present();
+           this.navCtrl.setRoot('EntrarPage');
          }
       })
       .catch(message => {

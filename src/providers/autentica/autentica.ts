@@ -99,7 +99,7 @@ export class AutenticaProvider {
 
   public signOut(){
     this.auth.auth.signOut();
-    this.rootPage = 'HomePage';
+    this.rootPage = 'EntrarPage';
   }
 
   private handlerError(error: any) {

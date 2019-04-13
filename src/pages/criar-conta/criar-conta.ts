@@ -42,7 +42,7 @@ export class CriarContaPage {
        .then( () => {
         this.toast.create({message:'Conta criada com sucesso. Foi enviado um e-mail de confirmação para você efetuar o login.',
          duration: 3000}).present();
-         this.navCtrl.setRoot('HomePage');
+         this.navCtrl.setRoot('EntrarPage');
       })
       .catch(message => {
         this.toast.create({message: message, duration: 3000}).present();
