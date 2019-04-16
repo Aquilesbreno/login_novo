@@ -16,7 +16,7 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
    //Qual a primeira página a se entrar
   //rootPage: any = HomePage;
-     rootPage: any = 'EntrarPage';
+     rootPage: any = 'BemvindoPage';
 
   pages: Array<{title: string, component: any}>;
 
@@ -45,7 +45,7 @@ export class MyApp {
       this.auth.authState.subscribe(user =>{
 
         if (user){
-          this.nav.setRoot('HomePage')
+          this.nav.setRoot('BemvindoPage')
         }
       })
     });
